@@ -28,6 +28,9 @@ struct FeedCell: View {
             Image("apple-music")
                 .resizable()
                 .scaledToFit()
+                .frame(maxHeight: 350)
+                .background(Color(hue: 1.0, saturation: 0.0, brightness: 0.9))
+                
             
             // action buttons
             HStack(spacing: 8) {
