@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		49A306B829627CFE000D08CF /* instagram_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306B729627CFE000D08CF /* instagram_swiftuiApp.swift */; };
-		49A306BA29627CFE000D08CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306B929627CFE000D08CF /* ContentView.swift */; };
 		49A306BC29627CFF000D08CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A306BB29627CFF000D08CF /* Assets.xcassets */; };
 		49A306BF29627CFF000D08CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A306BE29627CFF000D08CF /* Preview Assets.xcassets */; };
+		49A306CC29627E5B000D08CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306CB29627E5B000D08CF /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49A306B429627CFE000D08CF /* instagram-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "instagram-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A306B729627CFE000D08CF /* instagram_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagram_swiftuiApp.swift; sourceTree = "<group>"; };
-		49A306B929627CFE000D08CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49A306BB29627CFF000D08CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A306BE29627CFF000D08CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		49A306CB29627E5B000D08CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,12 @@
 		49A306B629627CFE000D08CF /* instagram-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				49A306C929627DE3000D08CF /* Models */,
+				49A306C829627DE0000D08CF /* Views */,
+				49A306C729627DDD000D08CF /* ViewModels */,
+				49A306C629627DDA000D08CF /* APIs */,
+				49A306C529627DA0000D08CF /* Utils */,
 				49A306B729627CFE000D08CF /* instagram_swiftuiApp.swift */,
-				49A306B929627CFE000D08CF /* ContentView.swift */,
 				49A306BB29627CFF000D08CF /* Assets.xcassets */,
 				49A306BD29627CFF000D08CF /* Preview Content */,
 			);
@@ -65,6 +69,146 @@
 				49A306BE29627CFF000D08CF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		49A306C529627DA0000D08CF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		49A306C629627DDA000D08CF /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		49A306C729627DDD000D08CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				49A306D929627F18000D08CF /* Profile */,
+				49A306D829627F13000D08CF /* Authentication */,
+				49A306D729627F0E000D08CF /* Notifications */,
+				49A306D629627F0B000D08CF /* Feed */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		49A306C829627DE0000D08CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49A306D529627EC4000D08CF /* Items */,
+				49A306D429627EBF000D08CF /* Authentication */,
+				49A306D329627EBA000D08CF /* Notifications */,
+				49A306D229627EB6000D08CF /* Search */,
+				49A306D129627EB2000D08CF /* Comments */,
+				49A306D029627EAE000D08CF /* Feed */,
+				49A306CE29627EA1000D08CF /* Profile */,
+				49A306CD29627E97000D08CF /* UploadPost */,
+				49A306CA29627E4F000D08CF /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49A306C929627DE3000D08CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49A306CA29627E4F000D08CF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				49A306CB29627E5B000D08CF /* ContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		49A306CD29627E97000D08CF /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		49A306CE29627EA1000D08CF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		49A306D029627EAE000D08CF /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		49A306D129627EB2000D08CF /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		49A306D229627EB6000D08CF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		49A306D329627EBA000D08CF /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		49A306D429627EBF000D08CF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		49A306D529627EC4000D08CF /* Items */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		49A306D629627F0B000D08CF /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		49A306D729627F0E000D08CF /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		49A306D829627F13000D08CF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		49A306D929627F18000D08CF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A306BA29627CFE000D08CF /* ContentView.swift in Sources */,
+				49A306CC29627E5B000D08CF /* ContentView.swift in Sources */,
 				49A306B829627CFE000D08CF /* instagram_swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
