@@ -11,6 +11,12 @@
 		49A306BC29627CFF000D08CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A306BB29627CFF000D08CF /* Assets.xcassets */; };
 		49A306BF29627CFF000D08CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A306BE29627CFF000D08CF /* Preview Assets.xcassets */; };
 		49A306CC29627E5B000D08CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306CB29627E5B000D08CF /* ContentView.swift */; };
+		49A306DB29627FDA000D08CF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306DA29627FDA000D08CF /* MainTabView.swift */; };
+		49A306DD29628018000D08CF /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306DC29628018000D08CF /* FeedView.swift */; };
+		49A306DF2962803F000D08CF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306DE2962803F000D08CF /* SearchView.swift */; };
+		49A306E12962804A000D08CF /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306E02962804A000D08CF /* NotificationsView.swift */; };
+		49A306E329628059000D08CF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306E229628059000D08CF /* ProfileView.swift */; };
+		49A306E529628061000D08CF /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306E429628061000D08CF /* UploadPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,13 @@
 		49A306BB29627CFF000D08CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A306BE29627CFF000D08CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49A306CB29627E5B000D08CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		49A306DA29627FDA000D08CF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		49A306DC29628018000D08CF /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		49A306DE2962803F000D08CF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		49A306E02962804A000D08CF /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		49A306E229628059000D08CF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		49A306E429628061000D08CF /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
+		49A306E629628160000D08CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,7 @@
 		49A306B629627CFE000D08CF /* instagram-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				49A306E629628160000D08CF /* Info.plist */,
 				49A306C929627DE3000D08CF /* Models */,
 				49A306C829627DE0000D08CF /* Views */,
 				49A306C729627DDD000D08CF /* ViewModels */,
@@ -123,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				49A306CB29627E5B000D08CF /* ContentView.swift */,
+				49A306DA29627FDA000D08CF /* MainTabView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 		49A306CD29627E97000D08CF /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
+				49A306E429628061000D08CF /* UploadPostView.swift */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -137,6 +153,7 @@
 		49A306CE29627EA1000D08CF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				49A306E229628059000D08CF /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -144,6 +161,7 @@
 		49A306D029627EAE000D08CF /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				49A306DC29628018000D08CF /* FeedView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -158,6 +176,7 @@
 		49A306D229627EB6000D08CF /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				49A306DE2962803F000D08CF /* SearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -165,6 +184,7 @@
 		49A306D329627EBA000D08CF /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				49A306E02962804A000D08CF /* NotificationsView.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -281,8 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A306DF2962803F000D08CF /* SearchView.swift in Sources */,
+				49A306DD29628018000D08CF /* FeedView.swift in Sources */,
 				49A306CC29627E5B000D08CF /* ContentView.swift in Sources */,
 				49A306B829627CFE000D08CF /* instagram_swiftuiApp.swift in Sources */,
+				49A306DB29627FDA000D08CF /* MainTabView.swift in Sources */,
+				49A306E529628061000D08CF /* UploadPostView.swift in Sources */,
+				49A306E329628059000D08CF /* ProfileView.swift in Sources */,
+				49A306E12962804A000D08CF /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +440,7 @@
 				DEVELOPMENT_TEAM = X726R6A26M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "instagram-swiftui/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -443,7 +469,7 @@
 				DEVELOPMENT_TEAM = X726R6A26M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "instagram-swiftui/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
