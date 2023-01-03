@@ -22,7 +22,7 @@ struct FeedCell: View {
                 Text("AppleOfficial")
                     .font(.system(size: 14, weight: .semibold))
             }
-            .padding(5)
+            .padding([.leading, .bottom], 8)
             
 //            // post image
             Image("apple-music")
@@ -33,14 +33,14 @@ struct FeedCell: View {
                 
             
             // action buttons
-            HStack(spacing: 8) {
+            HStack(spacing: 16) {
                 Button {
                     
                 } label: {
                     Image(systemName: "heart")
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 28, height: 28)
+                        .frame(width: 20, height: 20)
                         .font(.system(size: 20))
                         .padding(4)
                 }
@@ -51,7 +51,7 @@ struct FeedCell: View {
                     Image(systemName: "bubble.right")
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 28, height: 28)
+                        .frame(width: 20, height: 20)
                         .font(.system(size: 20))
                         .padding(4)
                 }
@@ -62,23 +62,32 @@ struct FeedCell: View {
                     Image(systemName: "paperplane")
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 28, height: 28)
+                        .frame(width: 20, height: 20)
                         .font(.system(size: 20))
                         .padding(4)
                 }
             }
             .foregroundColor(.black)
+            .padding(.leading, 4)
             
             // caption
+            
+            Text("3 likes")
+                .font(.system(size: 14, weight: .semibold))
+                .padding(.leading, 8)
+                .padding(.bottom, 2)
+            
             HStack {
                 Text("AppleOfficial").font(.system(size: 14, weight: .semibold)) +
                 Text("  Apple music is the best music app in the world!").font(.system(size: 15))
             }
+            .padding(.horizontal, 8)
             
             Text("2d")
                 .font(.system(size: 14))
                 .foregroundColor(.gray)
-                .padding(.top)
+                .padding(.leading, 8)
+                .padding(.top, -2)
         }
         
     }
