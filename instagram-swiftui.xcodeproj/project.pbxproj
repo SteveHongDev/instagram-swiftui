@@ -19,6 +19,7 @@
 		49A306E529628061000D08CF /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306E429628061000D08CF /* UploadPostView.swift */; };
 		49A306E829628C81000D08CF /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306E729628C81000D08CF /* FeedCell.swift */; };
 		49AB4885296D1B33000472B4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4884296D1B33000472B4 /* SearchBar.swift */; };
+		49AB4887296D2D5B000472B4 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4886296D2D5B000472B4 /* PostGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		49A306E629628160000D08CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49A306E729628C81000D08CF /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		49AB4884296D1B33000472B4 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBar.swift; path = "../../../../../github-repo/instagram-swiftui/instagram-swiftui/Views/Search/SearchBar.swift"; sourceTree = "<group>"; };
+		49AB4886296D2D5B000472B4 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostGridView.swift; path = "../../../../../github-repo/instagram-swiftui/instagram-swiftui/Views/Items/PostGridView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		49A306D529627EC4000D08CF /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				49AB4886296D2D5B000472B4 /* PostGridView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				49A306DF2962803F000D08CF /* SearchView.swift in Sources */,
 				49A306DD29628018000D08CF /* FeedView.swift in Sources */,
+				49AB4887296D2D5B000472B4 /* PostGridView.swift in Sources */,
 				49A306CC29627E5B000D08CF /* ContentView.swift in Sources */,
 				49A306B829627CFE000D08CF /* instagram_swiftuiApp.swift in Sources */,
 				49A306DB29627FDA000D08CF /* MainTabView.swift in Sources */,
