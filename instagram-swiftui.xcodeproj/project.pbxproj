@@ -18,6 +18,7 @@
 		49A306E329628059000D08CF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306E229628059000D08CF /* ProfileView.swift */; };
 		49A306E529628061000D08CF /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306E429628061000D08CF /* UploadPostView.swift */; };
 		49A306E829628C81000D08CF /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306E729628C81000D08CF /* FeedCell.swift */; };
+		49AB4885296D1B33000472B4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4884296D1B33000472B4 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		49A306E429628061000D08CF /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		49A306E629628160000D08CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49A306E729628C81000D08CF /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		49AB4884296D1B33000472B4 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBar.swift; path = "../../../../../github-repo/instagram-swiftui/instagram-swiftui/Views/Search/SearchBar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				49A306DE2962803F000D08CF /* SearchView.swift */,
+				49AB4884296D1B33000472B4 /* SearchBar.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				49A306DB29627FDA000D08CF /* MainTabView.swift in Sources */,
 				49A306E529628061000D08CF /* UploadPostView.swift in Sources */,
 				49A306E329628059000D08CF /* ProfileView.swift in Sources */,
+				49AB4885296D1B33000472B4 /* SearchBar.swift in Sources */,
 				49A306E12962804A000D08CF /* NotificationsView.swift in Sources */,
 				49A306E829628C81000D08CF /* FeedCell.swift in Sources */,
 			);
