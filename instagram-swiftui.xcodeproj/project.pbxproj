@@ -24,6 +24,7 @@
 		49AB488B296E89D3000472B4 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB488A296E89D3000472B4 /* UserListView.swift */; };
 		49AB488D296E9566000472B4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB488C296E9566000472B4 /* Extensions.swift */; };
 		49AB488F296E97E7000472B4 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB488E296E97E7000472B4 /* NotificationCell.swift */; };
+		49AB4891296E9E09000472B4 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4890296E9E09000472B4 /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		49AB488A296E89D3000472B4 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		49AB488C296E9566000472B4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		49AB488E296E97E7000472B4 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		49AB4890296E9E09000472B4 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				49A306E229628059000D08CF /* ProfileView.swift */,
+				49AB4890296E9E09000472B4 /* ProfileHeaderView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				49A306B829627CFE000D08CF /* instagram_swiftuiApp.swift in Sources */,
 				49A306DB29627FDA000D08CF /* MainTabView.swift in Sources */,
 				49A306E529628061000D08CF /* UploadPostView.swift in Sources */,
+				49AB4891296E9E09000472B4 /* ProfileHeaderView.swift in Sources */,
 				49A306E329628059000D08CF /* ProfileView.swift in Sources */,
 				49AB4889296E89C6000472B4 /* UserCell.swift in Sources */,
 				49AB4885296D1B33000472B4 /* SearchBar.swift in Sources */,
