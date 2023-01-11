@@ -22,6 +22,7 @@
 		49AB4887296D2D5B000472B4 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4886296D2D5B000472B4 /* PostGridView.swift */; };
 		49AB4889296E89C6000472B4 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4888296E89C6000472B4 /* UserCell.swift */; };
 		49AB488B296E89D3000472B4 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB488A296E89D3000472B4 /* UserListView.swift */; };
+		49AB488D296E9566000472B4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB488C296E9566000472B4 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		49AB4886296D2D5B000472B4 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostGridView.swift; path = "../../../../../github-repo/instagram-swiftui/instagram-swiftui/Views/Items/PostGridView.swift"; sourceTree = "<group>"; };
 		49AB4888296E89C6000472B4 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		49AB488A296E89D3000472B4 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		49AB488C296E9566000472B4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		49A306C529627DA0000D08CF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				49AB488C296E9566000472B4 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				49A306E12962804A000D08CF /* NotificationsView.swift in Sources */,
 				49A306E829628C81000D08CF /* FeedCell.swift in Sources */,
 				49AB488B296E89D3000472B4 /* UserListView.swift in Sources */,
+				49AB488D296E9566000472B4 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

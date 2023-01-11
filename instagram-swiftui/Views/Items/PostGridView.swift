@@ -15,27 +15,17 @@ struct PostGridView: View {
         GeometryReader { geo in
             LazyVGrid(columns: items, spacing: 2) {
                 
-                ForEach(0 ..< 2) { _ in
-                    Image("apple-logo")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: geo.size.width / 3, height: geo.size.width / 3)
-                        .clipped()
-                    Image("apple-music")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: geo.size.width / 3, height: geo.size.width / 3)
-                        .clipped()
-                    Image("apple-music2")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: geo.size.width / 3, height: geo.size.width / 3)
-                        .clipped()
-                    Image("apple-logo")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: geo.size.width / 3, height: geo.size.width / 3)
-                        .clipped()
+                ForEach(0 ..< 10) { _ in
+                    NavigationLink {
+                        FeedView()
+                    } label: {
+                        Image("apple-logo")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geo.size.width / 3, height: geo.size.width / 3)
+                            .clipped()
+                    }
+
                 }
             } //: LAZYVGRID
         } //: GEO
