@@ -20,6 +20,8 @@
 		49A306E829628C81000D08CF /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306E729628C81000D08CF /* FeedCell.swift */; };
 		49AB4885296D1B33000472B4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4884296D1B33000472B4 /* SearchBar.swift */; };
 		49AB4887296D2D5B000472B4 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4886296D2D5B000472B4 /* PostGridView.swift */; };
+		49AB4889296E89C6000472B4 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB4888296E89C6000472B4 /* UserCell.swift */; };
+		49AB488B296E89D3000472B4 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB488A296E89D3000472B4 /* UserListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		49A306E729628C81000D08CF /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		49AB4884296D1B33000472B4 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchBar.swift; path = "../../../../../github-repo/instagram-swiftui/instagram-swiftui/Views/Search/SearchBar.swift"; sourceTree = "<group>"; };
 		49AB4886296D2D5B000472B4 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostGridView.swift; path = "../../../../../github-repo/instagram-swiftui/instagram-swiftui/Views/Items/PostGridView.swift"; sourceTree = "<group>"; };
+		49AB4888296E89C6000472B4 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		49AB488A296E89D3000472B4 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				49AB4886296D2D5B000472B4 /* PostGridView.swift */,
+				49AB4888296E89C6000472B4 /* UserCell.swift */,
+				49AB488A296E89D3000472B4 /* UserListView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -318,9 +324,11 @@
 				49A306DB29627FDA000D08CF /* MainTabView.swift in Sources */,
 				49A306E529628061000D08CF /* UploadPostView.swift in Sources */,
 				49A306E329628059000D08CF /* ProfileView.swift in Sources */,
+				49AB4889296E89C6000472B4 /* UserCell.swift in Sources */,
 				49AB4885296D1B33000472B4 /* SearchBar.swift in Sources */,
 				49A306E12962804A000D08CF /* NotificationsView.swift in Sources */,
 				49A306E829628C81000D08CF /* FeedCell.swift in Sources */,
+				49AB488B296E89D3000472B4 /* UserListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
