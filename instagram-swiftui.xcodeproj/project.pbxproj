@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49120DF0297109BC00224FD6 /* PhotosPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49120DEF297109BC00224FD6 /* PhotosPickerView.swift */; };
 		49A306B829627CFE000D08CF /* instagram_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A306B729627CFE000D08CF /* instagram_swiftuiApp.swift */; };
 		49A306BC29627CFF000D08CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A306BB29627CFF000D08CF /* Assets.xcassets */; };
 		49A306BF29627CFF000D08CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A306BE29627CFF000D08CF /* Preview Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49120DEF297109BC00224FD6 /* PhotosPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerView.swift; sourceTree = "<group>"; };
 		49A306B429627CFE000D08CF /* instagram-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "instagram-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A306B729627CFE000D08CF /* instagram_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagram_swiftuiApp.swift; sourceTree = "<group>"; };
 		49A306BB29627CFF000D08CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				49AB488C296E9566000472B4 /* Extensions.swift */,
+				49120DEF297109BC00224FD6 /* PhotosPickerView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			files = (
 				49A306DF2962803F000D08CF /* SearchView.swift in Sources */,
 				49A306DD29628018000D08CF /* FeedView.swift in Sources */,
+				49120DF0297109BC00224FD6 /* PhotosPickerView.swift in Sources */,
 				49AB4887296D2D5B000472B4 /* PostGridView.swift in Sources */,
 				49A306CC29627E5B000D08CF /* ContentView.swift in Sources */,
 				49A306B829627CFE000D08CF /* instagram_swiftuiApp.swift in Sources */,

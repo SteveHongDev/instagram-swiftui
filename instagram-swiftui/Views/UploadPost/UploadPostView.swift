@@ -17,29 +17,8 @@ struct UploadPostView: View {
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                PhotosPicker(selection: $selectedImage, matching: .images, photoLibrary: .shared()) {
-                    if let selectedImageData,
-                       let uiImage = UIImage(data: selectedImageData) {
-                        Image(uiImage: uiImage)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 96, height: 96)
-                            .clipped()
-                    } else {
-                        Image("plus_photo")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 96, height: 96)
-                            .clipped()
-                    }
-                } //: PHOTOSPICKER
-                .onChange(of: selectedImage) { newValue in
-                    Task {
-                        if let data = try? await newValue?.loadTransferable(type: Data.self) {
-                            selectedImageData = data
-                        }
-                    }
-                }
+                
+                PhotosPickerView(selectedImage: $selectedImage, selectedImageData: $selectedImageData)
                 
                 TextField("Enter your caption...", text: $captionText)
             } //: HSTACK
