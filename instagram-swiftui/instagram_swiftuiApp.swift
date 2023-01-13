@@ -11,7 +11,7 @@ import SwiftUI
 struct instagram_swiftuiApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            LoginView()
         }
     }
 }

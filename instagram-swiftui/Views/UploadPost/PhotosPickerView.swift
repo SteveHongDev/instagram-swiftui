@@ -14,7 +14,7 @@ struct PhotosPickerView: View {
     @Binding var selectedImageData: Data?
     
     var body: some View {
-        // 분리할 것 - Reuseable하게 사용할 것
+        
         PhotosPicker(selection: $selectedImage, matching: .images, photoLibrary: .shared()) {
             if let selectedImageData,
                let uiImage = UIImage(data: selectedImageData) {
@@ -22,7 +22,7 @@ struct PhotosPickerView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: 96, height: 96)
-                    .clipped()
+                    .clipShape(Circle())
             } else {
                 Image("plus_photo")
                     .resizable()
