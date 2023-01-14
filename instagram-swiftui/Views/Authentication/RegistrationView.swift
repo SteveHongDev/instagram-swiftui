@@ -7,6 +7,8 @@
 
 import SwiftUI
 import PhotosUI
+
+
 struct RegistrationView: View {
     
     @State private var email = ""
