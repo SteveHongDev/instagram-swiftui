@@ -17,7 +17,7 @@ struct instagram_swiftuiApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            LoginView().environmentObject(AuthViewModel())
         }
     }
 }

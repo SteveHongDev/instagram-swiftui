@@ -19,6 +19,7 @@ struct RegistrationView: View {
     @State private var selectedImageData: Data? = nil
     
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         ZStack {
@@ -64,7 +65,7 @@ struct RegistrationView: View {
                 
                 // sign up
                 Button {
-                    
+                    viewModel.register()
                 } label: {
                     Text("Sign Up")
                         .font(.headline)
