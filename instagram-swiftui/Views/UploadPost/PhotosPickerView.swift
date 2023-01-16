@@ -18,6 +18,7 @@ struct PhotosPickerView: View {
         PhotosPicker(selection: $selectedImage, matching: .images, photoLibrary: .shared()) {
             if let selectedImageData,
                let uiImage = UIImage(data: selectedImageData) {
+
                 Image(uiImage: uiImage)
                     .resizable()
                     .scaledToFill()
