@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 class AuthViewModel: ObservableObject {
     
@@ -16,6 +17,7 @@ class AuthViewModel: ObservableObject {
     
     init() {
         userSession = Auth.auth().currentUser
+        fetchUser()
     }
     
     func login(withEmail email: String, password: String) {
@@ -53,7 +55,7 @@ class AuthViewModel: ObservableObject {
                             "profileImageUrl": imageUrl,
                             "uid": user.uid]
                 
-                Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
+                COLLECTION_USERS.document(user.uid).setData(data) { _ in
                     print("User data uploaded.")
                 }
             }
@@ -65,11 +67,14 @@ class AuthViewModel: ObservableObject {
     }
     
     func signout() {
-        userSession = nil
+        self.userSession = nil
         try? Auth.auth().signOut()
     }
     
     func fetchUser() {
-        
+        guard let uid = userSession?.uid else { return }
+        COLLECTION_USERS.document(uid).getDocument { snapshot, _ in
+            print(snapshot?.data())
+        }
     }
 }

@@ -15,7 +15,7 @@ struct PostGridView: View {
         GeometryReader { geo in
             LazyVGrid(columns: items, spacing: 2) {
                 
-                ForEach(0 ..< 10) { _ in
+                ForEach(0 ..< 9) { _ in
                     NavigationLink {
                         FeedView()
                     } label: {
