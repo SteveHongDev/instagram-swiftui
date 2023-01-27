@@ -15,6 +15,7 @@
 		49120DFA29711E8700224FD6 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49120DF929711E8700224FD6 /* CustomSecureField.swift */; };
 		4919E4562977D9EE00654333 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919E4552977D9EE00654333 /* Constants.swift */; };
 		4919E4692977DB8600654333 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4919E4682977DB8600654333 /* Kingfisher */; };
+		493DC4D02983A1B8003F5027 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493DC4CF2983A1B8003F5027 /* SearchViewModel.swift */; };
 		4952EB842980F53C004F2512 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4952EB832980F53C004F2512 /* FirebaseAuth */; };
 		4952EB862980F53C004F2512 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4952EB852980F53C004F2512 /* FirebaseFirestore */; };
 		4952EB882980F53C004F2512 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4952EB872980F53C004F2512 /* FirebaseFirestoreSwift */; };
@@ -55,6 +56,7 @@
 		49120DF729711E8000224FD6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		49120DF929711E8700224FD6 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		4919E4552977D9EE00654333 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		493DC4CF2983A1B8003F5027 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		49A306B429627CFE000D08CF /* instagram-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "instagram-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A306B729627CFE000D08CF /* instagram_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagram_swiftuiApp.swift; sourceTree = "<group>"; };
 		49A306BB29627CFF000D08CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				49A306D829627F13000D08CF /* Authentication */,
 				49A306D729627F0E000D08CF /* Notifications */,
 				49A306D629627F0B000D08CF /* Feed */,
+				493DC4CF2983A1B8003F5027 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				49AB4889296E89C6000472B4 /* UserCell.swift in Sources */,
 				49AB4885296D1B33000472B4 /* SearchBar.swift in Sources */,
 				49120DFA29711E8700224FD6 /* CustomSecureField.swift in Sources */,
+				493DC4D02983A1B8003F5027 /* SearchViewModel.swift in Sources */,
 				49A306E12962804A000D08CF /* NotificationsView.swift in Sources */,
 				49A306E829628C81000D08CF /* FeedCell.swift in Sources */,
 				49F6BA952980ED8C007229C7 /* User.swift in Sources */,

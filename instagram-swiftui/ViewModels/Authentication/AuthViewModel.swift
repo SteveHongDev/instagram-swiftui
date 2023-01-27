@@ -52,8 +52,7 @@ class AuthViewModel: ObservableObject {
                 let data = ["email": email,
                             "username": username,
                             "fullname": fullname,
-                            "profileImageUrl": imageUrl,
-                            "uid": user.uid]
+                            "profileImageUrl": imageUrl]
                 
                 COLLECTION_USERS.document(user.uid).setData(data) { _ in
                     print("User data uploaded.")

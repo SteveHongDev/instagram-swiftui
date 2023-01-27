@@ -40,7 +40,7 @@ struct MainTabView: View {
                 Button {
                     AuthViewModel.shared.signout() // or @EnvironmentObject를 이용하는 방법
                 } label: {
-                    Text("Logout").foregroundColor(.black)
+                    Text("Logout").foregroundColor(.green)
                 }
             }
             .navigationTitle("Home")
