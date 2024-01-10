@@ -10,7 +10,19 @@ import Kingfisher
 
 struct FeedCell: View {
     
-    let post: Post
+    var viewModel: FeedCellViewModel
+    
+    init(post: Post) {
+        self.viewModel = FeedCellViewModel(post: post)
+    }
+
+    private var post: Post {
+        return viewModel.post
+    }
+
+    private var didLike: Bool {
+        return post.didLike ?? false
+    }
     
     var body: some View {
         VStack {
@@ -38,10 +50,11 @@ struct FeedCell: View {
             // action buttons
             HStack(spacing: 16) {
                 Button {
-                    print("Like post")
+                    handleLikeTapped()
                 } label: {
-                    Image(systemName: "heart")
+                    Image(systemName: didLike ? "heart.fill" : "heart")
                         .imageScale(.large)
+                        .foregroundStyle(didLike ? .red : .black)
                 }
                 
                 Button {
@@ -65,12 +78,14 @@ struct FeedCell: View {
             .foregroundStyle(.black)
             
             // likes label
-            Text("\(post.likes) likes")
-                .font(.footnote)
-                .fontWeight(.semibold)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 10)
-                .padding(.top, 1)
+            if post.likes > 0 {
+                Text("\(post.likes) likes")
+                    .font(.footnote)
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 10)
+                    .padding(.top, 1)
+            }
             
             // caption label
             HStack {
@@ -89,6 +104,16 @@ struct FeedCell: View {
                 .padding(.leading, 10)
                 .padding(.top, 1)
                 .foregroundStyle(.gray)
+        }
+    }
+    
+    private func handleLikeTapped() {
+        Task {
+            if self.didLike {
+                try await viewModel.unlike()
+            } else {
+                try await viewModel.like()
+            }
         }
     }
 }
