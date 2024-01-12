@@ -26,6 +26,7 @@ import Foundation
             post.didLike = true
             post.likes += 1
             try await PostService.likePost(currentPost)
+            IGNotificationManager.shared.uploadLikeNotification(to: post.ownerUid, post: post)
         } catch {
             post.didLike = false
             post.likes -= 1

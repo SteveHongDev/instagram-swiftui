@@ -9,8 +9,28 @@ import SwiftUI
 
 struct ProfileHeaderView: View {
     
-    let user: User
+    var viewModel: ProfileViewModel
     @State private var showEditProfile = false
+    
+    init(user: User) {
+        self.viewModel = ProfileViewModel(user: user)
+    }
+    
+    private var user: User {
+        return viewModel.user
+    }
+    
+    private var stats: UserStats {
+        return user.stats ?? .init(followingCount: 0, followersCount: 0, postsCount: 0)
+    }
+    
+    private var isFollowed: Bool {
+        return user.isFollowed ?? false
+    }
+    
+    private func setButtonColor(first: Color, second: Color) -> Color {
+        return user.isCurrentUser || isFollowed ? first : second
+    }
     
     var body: some View {
         VStack(spacing: 10) {
@@ -22,9 +42,15 @@ struct ProfileHeaderView: View {
                 Spacer()
                 
                 HStack(spacing: 8) {
-                    UserStatView(value: 24, title: "Posts")
-                    UserStatView(value: 32, title: "Followers")
-                    UserStatView(value: 64, title: "Followings")
+                    UserStatView(value: stats.postsCount, title: "Posts")
+                    
+                    NavigationLink(value: UserListConfig.followers(uid: user.id)) {
+                        UserStatView(value: stats.followersCount, title: "Followers")
+                    }
+                    
+                    NavigationLink(value: UserListConfig.following(uid: user.id)) {
+                        UserStatView(value: stats.followingCount, title: "Following")
+                    }
                 }
             }
             .padding(.horizontal)
@@ -50,22 +76,35 @@ struct ProfileHeaderView: View {
                 if user.isCurrentUser {
                     showEditProfile.toggle()
                 } else {
-                    print("Follow user")
+                    handleFollowTapped()
                 }
             } label: {
-                Text(user.isCurrentUser ? "Edit Profile" : "Follow")
+                Text(user.isCurrentUser ? "Edit Profile" : isFollowed ? "Following" : "Follow")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .frame(width: 360, height: 32)
-                    .background(user.isCurrentUser ? .white : Color(.systemBlue))
-                    .foregroundStyle(user.isCurrentUser ? .black : .white)
+                    .background(setButtonColor(first: .white, second: Color(.systemBlue)))
+                    .foregroundStyle(setButtonColor(first: .black, second: .white))
                     .clipShape(RoundedRectangle(cornerRadius: 6))
-                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(user.isCurrentUser ? .gray : .clear, lineWidth: 1))
+                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(setButtonColor(first: .gray, second: .clear), lineWidth: 1))
             }
             Divider()
         }
+        .task { await viewModel.checkIfUserIsFollowed() }
+        .task { await viewModel.fetchUserStats() }
+        .navigationDestination(for: UserListConfig.self) { config in
+            UserListView(config: config)
+        }
         .fullScreenCover(isPresented: $showEditProfile) {
             EditProfileView(user: user)
+        }
+    }
+    
+    func handleFollowTapped() {
+        if isFollowed {
+            viewModel.unfollow()
+        } else {
+            viewModel.follow()
         }
     }
 }

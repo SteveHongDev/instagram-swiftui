@@ -27,6 +27,7 @@ import Firebase
         let comment = Comment(commentOwnerUid: uid, commentText: commentText, postId: post.id, postOwnerUid: post.ownerUid, timestamp: Timestamp())
         
         try await service.uploadComment(comment)
+        IGNotificationManager.shared.uploadCommentNotification(to: post.ownerUid, post: post)
     }
     
     @MainActor

@@ -27,6 +27,10 @@ struct PostService {
         let snapshot = try await FirebaseConstants.PostsCollection.whereField("ownerUid", isEqualTo: uid).getDocuments()
         return try snapshot.documents.compactMap { try $0.data(as: Post.self) }
     }
+    
+    static func fetchPost(postId: String) async throws -> Post {
+        return try await FirebaseConstants.PostsCollection.document(postId).getDocument(as: Post.self)
+    }
 }
 
 // MARK: - Likes

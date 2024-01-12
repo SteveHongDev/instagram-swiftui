@@ -40,5 +40,5 @@ struct CommentCell: View {
 }
 
 #Preview {
-    CommentCell(comment: Comment(commentOwnerUid: "123", commentText: "Test Comment", postId: "13132", postOwnerUid: "123123", timestamp: Timestamp()))
+    CommentCell(comment: DeveloperPreview.shared.comment)
 }
