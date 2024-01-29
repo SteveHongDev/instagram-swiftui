@@ -40,6 +40,8 @@ import Foundation
             post.didLike = false
             post.likes -= 1
             try await PostService.unlikePost(currentPost)
+            
+            await IGNotificationManager.shared.deleteLikeNotification(notificationOwnerUid: post.ownerUid, post: post)
         } catch {
             post.didLike = true
             post.likes += 1

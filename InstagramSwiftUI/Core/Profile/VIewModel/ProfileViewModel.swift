@@ -31,6 +31,8 @@ extension ProfileViewModel {
         Task {
             try await UserService.unfollow(uid: user.id)
             user.isFollowed = false
+            
+            await IGNotificationManager.shared.deleteFollowNotification(notificationOwnerUid: user.id)
         }
     }
     

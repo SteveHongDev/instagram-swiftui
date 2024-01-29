@@ -13,7 +13,7 @@ class IGNotificationsService {
     func fetchNotifications() async throws -> [IGNotification] {
         guard let currentUid = Auth.auth().currentUser?.uid else { return [] }
         
-        let snapshot = try await FirebaseConstants.UserNotificationCollection(uid: currentUid).getDocuments()
+        let snapshot = try await FirebaseConstants.UserNotificationCollection(uid: currentUid).order(by: "timestamp", descending: true).getDocuments()
         
         return snapshot.documents.compactMap { try? $0.data(as: IGNotification.self) }
     }
@@ -30,7 +30,32 @@ class IGNotificationsService {
         ref.setData(notificationData)
     }
     
-    func deleteNotification(to uid: String, type: IGNotificationType, post: Post? = nil) {
+    func deleteNotification(to uid: String, type: IGNotificationType, post: Post? = nil) async throws {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
+        let snapshot = try await FirebaseConstants
+            .UserNotificationCollection(uid: uid)
+            .whereField("notificationSenderUid", isEqualTo: currentUid)
+            .getDocuments()
+        
+        let notifications = snapshot.documents.compactMap { try? $0.data(as: IGNotification.self) }
+        
+        let filteredByType = notifications.filter { $0.type == type } // gets all notifications by type
+        
+        if type == .follow {
+            for notification in filteredByType {
+                try await FirebaseConstants
+                    .UserNotificationCollection(uid: uid)
+                    .document(notification.id)
+                    .delete()
+            }
+        } else {
+            guard let notificationToDelete = filteredByType.first(where: { $0.postId == post?.id }) else { return }// gets notification for that post
+            
+            try await FirebaseConstants
+                .UserNotificationCollection(uid: uid)
+                .document(notificationToDelete.id)
+                .delete()
+        }
     }
 }
